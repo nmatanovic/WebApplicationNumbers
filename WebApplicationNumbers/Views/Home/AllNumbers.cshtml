@@ -1,0 +1,25 @@
+﻿@model WebApplicationNumbers.Models.NMockList
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AllNumbers</title>
+</head>
+<body>
+    <div id="idAllNumbers">
+        <p>All Numbers</p>
+        @{
+            for (int i = 0; i < Model.Count; i++)
+            {
+                <p>@Model[i].Value</p>
+            }
+        }
+
+    </div>
+</body>
+</html>

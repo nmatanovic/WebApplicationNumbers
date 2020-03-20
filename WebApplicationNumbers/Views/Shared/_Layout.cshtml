@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+
+    <div style="position: absolute; width: 80%; bottom: 10px; border: 3px solid #ffffff; background-color:black">
+        <p style="color: white;">
+            Create a website in which users can add numbers. The website will display various data regarding the numbers added. We have two collections of numbers:<br>
+            - AllNumbers: remembers all the numbers added by all users since the launch of the site or since the last reset<br>
+            - UserNumbers: remembers all the numbers added by the current user since the start of the current session or since the last reset<br>
+
+            The elements of the site:
+            - an input field
+            - an "Add" button next to the input field
+            When a user presses "Add", the number from the input field is added
+            - a label "Numbers:"
+            - a "numbers" label next to the "Numbers:" label that shows the list of numbers in UserNumbers, separated by commas. The content of this label is updated when the user adds a number.
+            - a label "Sum:"
+            - a "sum" label next to the "Sum:" label that shows the sum of the numbers in AllNumbers. For (7, 3, 5, 3) the sum will be 18. The content of this label is updated continuously (once every 100ms).
+            - a label "Nr repetitions:"
+            - a "nrRepetitions" label next to the "Nr repetitions:" label that shows the number of repetitions in AllNumbers. For (7, 5, 3, 5, 7, 5) the number of repetitions is 3. The content of this label is updated continuously (once every 100ms).<br>
+            - a label "Uniques:"
+            - a "uniques" label next to the "Uniques:" label that shows the sorted list of unique numbers in AllNumbers. For (7, 7, 3, 5, 5, 5) the list is (3, 5, 7). The content of this label is updated continuously (once every 100ms).
+
+            - a "Reset" button which removes all numbers from AllNumbers and UserNumbers
+        </p>
+    </div>
+</body>
+</html>

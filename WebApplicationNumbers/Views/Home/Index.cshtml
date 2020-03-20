@@ -1,0 +1,44 @@
+﻿@model WebApplicationNumbers.Models.NMockList
+@{
+    //Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>IndexView</title>
+    <link href="@Url.Content("~/Static/main.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="row">
+        <div class="column" style="overflow-y:scroll; overflow-x:hidden; background-color:#aaa;">
+            @{Html.RenderPartial("AllNumbers", Model);}
+        </div>
+
+        <div class="column" style="overflow-y:scroll; overflow-x:hidden; background-color:#aaa;">
+            @{Html.RenderPartial("UserNumbers", Model);}
+        </div>
+        <div>
+            @{Html.RenderPartial("Statistic");}
+        </div>
+        <div>
+            <p>Place for Entering Numbers</p>
+            <p>@{var a = ViewBag.Message; @a}</p>
+
+            <input type="text" id="fAdd" name="fAdd" />
+            <input type="submit" value="Add" onclick="AddNumber()" />
+        </div>
+        <div>
+            <input type="button" value="Reset" onclick="ResetAll()"/>
+        </div>
+    </div>
+    <script src="~/scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/scripts/Utils.JS"></script>
+    <script src="~/scripts/HomeJS.js"></script>
+</body>
+
+
+</html>
